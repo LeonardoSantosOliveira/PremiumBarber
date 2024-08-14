@@ -4,7 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 export const routes: Routes = [
     {
         path: '',
-        title: "Home",
+        title: "Premium Barbar",
         component: HomeComponent,
         pathMatch: "full"
     },
