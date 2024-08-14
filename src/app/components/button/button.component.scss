@@ -7,4 +7,10 @@
     font-weight: 700;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
+    transition: all ease .2s;
+
+    &:hover {
+        background-color: lighten($yellow, 10%);
+    }
 }

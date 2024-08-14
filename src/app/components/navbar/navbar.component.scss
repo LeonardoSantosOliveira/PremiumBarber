@@ -28,5 +28,10 @@
     margin-right: 34px;
     font-size: 18px;
     color: #fff;
+    transition: all ease .2s;
+
+    &:hover {
+        color: $yellow;
+    }
 }
 

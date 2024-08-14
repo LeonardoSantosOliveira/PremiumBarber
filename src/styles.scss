@@ -3,6 +3,9 @@
 /* Importação da fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Importação do arquivo de variaveis de estilos */
+@import "./variables.scss";
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +16,7 @@
 body, html {
     width: 100vw;
     height: 100vh;
+    background-color: $blue;
 }
 
 li {
