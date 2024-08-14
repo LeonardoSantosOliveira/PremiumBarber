@@ -13,4 +13,8 @@
     &:hover {
         background-color: lighten($yellow, 10%);
     }
+
+    &-hero {
+        width: 290px;
+    }
 }
