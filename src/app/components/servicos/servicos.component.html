@@ -1,1 +1,13 @@
-<p>servicos works!</p>
+<div class="container container-background">
+    <div class="services">
+        <div class="services__texts">
+            <h2 class="services__texts-title">Serviços</h2>
+            <p class="services__texts-paragraph">Lorem ipsum dolor sit amet consectetur. Quisque in tellus fames eleifend etiam non arcu. Diam et sit <br> eget elementum morbi nulla. Purus enim metus vitae imperdiet mauris porttitor fermentum lectus.</p>
+        </div>
+        <div class="services__itens">
+            @for (servico of servicos; track servico) {
+                <app-service-item [photo]="servico.photo" [price]="servico.price" [title]="servico.title" ></app-service-item>
+            }
+        </div>
+    </div>
+</div>
