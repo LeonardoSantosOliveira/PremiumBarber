@@ -11,13 +11,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
 }
 
 body, html {
     width: 100vw;
     height: 100vh;
     background-color: $blue;
+    overflow-x: hidden;
 }
 
 li {
