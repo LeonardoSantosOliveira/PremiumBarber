@@ -1,0 +1,19 @@
+@import "../../../variables.scss";
+
+.container__modal {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 620px;
+    height: 736px;
+    background-color: $blue;
+    border-radius: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438)
+}   
