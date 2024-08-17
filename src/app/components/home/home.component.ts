@@ -5,6 +5,7 @@ import { AboutComponent } from '../about/about.component';
 import { ServicosComponent } from '../servicos/servicos.component';
 import { PartyComponent } from '../party/party.component';
 import { UnitsComponent } from '../units/units.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ import { UnitsComponent } from '../units/units.component';
     ServicosComponent,
     PartyComponent,
     UnitsComponent,
-    
+    FooterComponent    
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

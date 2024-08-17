@@ -1,8 +1,8 @@
 <div class="equipe">
     <h2 class="equipe__title">NOSSA EQUIPE</h2>
     <div class="barbers">
-        <app-barber></app-barber>
-        <app-barber></app-barber>
-        <app-barber></app-barber>
+        @for (barber of barbers; track barber) {
+            <app-barber [facebook]="barber.facebook" [instagram]="barber.instagram" [twitter]="barber.twitter" [photo]="barber.photo" [name]="barber.name"></app-barber>
+        }
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-barber',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './barber.component.scss'
 })
 export class BarberComponent {
-
+  @Input() photo: string = '';
+  @Input() name: string ='';
+  @Input() facebook: string = '';
+  @Input() twitter: string = '';
+  @Input() instagram: string = '';
 }

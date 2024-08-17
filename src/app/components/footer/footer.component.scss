@@ -1,0 +1,30 @@
+.footer {
+
+    background-color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__socialIcons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 26px;
+        margin-bottom: 26px;
+    }
+
+    &__logo {
+        width: 166px;
+        height: 196px;
+        margin-bottom: 100px;
+    }
+    
+}
+
+.icon {
+    height: 40px;
+    object-fit: cover;
+}
