@@ -6,6 +6,7 @@ import { ServicosComponent } from '../servicos/servicos.component';
 import { PartyComponent } from '../party/party.component';
 import { UnitsComponent } from '../units/units.component';
 import { FooterComponent } from '../footer/footer.component';
+import { ButtonWppComponent } from '../button-wpp/button-wpp.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { FooterComponent } from '../footer/footer.component';
     ServicosComponent,
     PartyComponent,
     UnitsComponent,
-    FooterComponent    
+    FooterComponent,
+    ButtonWppComponent    
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
