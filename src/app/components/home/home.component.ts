@@ -4,6 +4,7 @@ import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
 import { ServicosComponent } from '../servicos/servicos.component';
 import { PartyComponent } from '../party/party.component';
+import { UnitsComponent } from '../units/units.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,8 @@ import { PartyComponent } from '../party/party.component';
     AboutComponent,
     ServicosComponent,
     PartyComponent,
+    UnitsComponent,
+    
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

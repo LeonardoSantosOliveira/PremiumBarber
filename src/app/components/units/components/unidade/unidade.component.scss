@@ -1,0 +1,39 @@
+.unidade {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__photo {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        background-color: rgba(0, 0, 0, 0.719);
+        border-radius: 8px;
+        border: 2px solid #787878;
+        text-align: center;
+        white-space: nowrap;
+        margin-top: -85px;
+
+        &-name {
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        &-address {
+            font-size: 16px;
+            color: #Fff;
+            font-weight: 400;
+        }
+    }
+}
