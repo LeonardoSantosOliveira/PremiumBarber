@@ -1,4 +1,7 @@
-@import url(../../../variables.scss);
+@import "../../../variables.scss";
+.color {
+    color: $yellow;
+}
 
 .hero__background {
     width: 100%;
@@ -17,6 +20,10 @@
     flex-direction: column;
 }
 
+.hero__hour-mobile {
+    display: none;
+}
+
 .hero__title {
     color: #fff;
     margin-bottom: 14px;
@@ -32,4 +39,40 @@
     color: #fff;
     margin-bottom: 30px;
     font-size: 18px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .hero__background {
+        height: 100%;
+        background-image: linear-gradient(to top, #080B16 0%, rgba(255, 255, 255, 0) 20%), url("/assets/images/mobileBackground.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .hero__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    
+    .hero__title {
+        font-size: 18px;
+    }
+    
+    .hero__hour {
+        font-size: 14px;
+        display: none;
+    }
+
+    .hero__hour-mobile { 
+        color: #fff;
+        margin-bottom: 30px;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+    }
 }

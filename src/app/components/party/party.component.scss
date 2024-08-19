@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 
     &__title {
         color: #949494;
@@ -26,6 +27,57 @@
     align-items: center;
     gap: 50px;
     overflow-x: auto;
-    scroll-behavior: auto;
-    
+
+}
+
+@media screen and (max-width: 768px) {
+    .equipe {
+        height: auto;
+        flex-direction: column;
+
+        &__title {
+            rotate: 0deg;
+            padding-bottom: 40px;
+        }
+    }
+
+    .barbers {
+        margin-left: 0px;
+        padding-left: 50%;
+        overflow-x: scroll;
+        margin-right: 50px;
+
+    }
+}
+
+@media (max-width: 600px) {
+    .equipe {
+        width: 100%;
+        height: auto;
+        padding: 40px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+
+        &__title {
+            rotate: -90deg;
+            font-size: 40px;
+            margin-left: 110px;
+            white-space: nowrap;
+            padding-bottom: 0px;
+        }
+    }
+
+    .barbers {
+        margin-left: -100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0px;
+        gap: 50px;
+        overflow-x: auto;
+
+    }
 }

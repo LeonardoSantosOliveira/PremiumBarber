@@ -1,8 +1,9 @@
 <div class="container navbarBackground">
     <ul class="navbar">
+        <a routerLink="/"><img class="navbar__logo navbar__logo-mobile" src="assets/images/logo-white.svg" alt="logo da barbearia"></a>
         <li class="navbar__item">
             <a routerLink="/"><img class="navbar__logo" src="assets/images/logo-white.svg" alt="logo da barbearia"></a>
-            <div>
+            <div class="nav-items">
                 <a href="#" class="nav-item">Sobre</a>
                 <a href="#" class="nav-item">Seriviços</a>
                 <a href="#" class="nav-item">Contatos</a>
@@ -11,5 +12,10 @@
         <li class="navbar__item">
             <app-button>Agendar Horário</app-button>
         </li>
+        <div class="hamburguer">
+            <div class="hamburguer__item"></div>
+            <div class="hamburguer__item"></div>
+            <div class="hamburguer__item"></div>
+        </div>
     </ul>
 </div>
