@@ -13,7 +13,7 @@
         <li class="navbar__item">
             <app-button>Agendar Horário</app-button>
         </li>
-        <div class="hamburguer" (click)="abrirMenu(menu)">
+        <div class="hamburguer" (click)="abrirMenu(menu, overlay)">
             <div class="hamburguer__item"></div>
             <div class="hamburguer__item"></div>
             <div class="hamburguer__item"></div>
@@ -21,7 +21,7 @@
     </ul>
 </div>
 <div class="menu hidden animate__animated animate__slideInRight" #menu>
-    <i class="bi bi-x-lg" (click)="fecharMenu(menu)"></i>
+    <i class="bi bi-x-lg" (click)="fecharMenu(menu, overlay)"></i>
     <img class="menu__img" src="/assets/images/logo-white.svg" alt="logo">
     <ul class="menu__list">
         <li class="menu__list-item">Sobre</li>
@@ -30,3 +30,4 @@
     </ul>
     <button class="menu__button">Agendar Horário</button>
 </div>
+<div class="overlay hidden" #overlay></div>
