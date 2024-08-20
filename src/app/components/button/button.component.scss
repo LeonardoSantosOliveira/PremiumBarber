@@ -9,6 +9,7 @@
     border: none;
     cursor: pointer;
     transition: all ease .2s;
+    color: $blue;
 
     &:hover {
         background-color: lighten($yellow, 10%);
