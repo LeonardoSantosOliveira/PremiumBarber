@@ -62,6 +62,8 @@
     }
 }
 
+
+
 .menu {
     width: 200px;
     height: 214px;
@@ -71,7 +73,10 @@
     justify-content: center;
     align-items: center;
     padding: 15px 0px;
-    position: relative;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    z-index: 1;
 
     & .bi-x-lg {
         position: absolute;
@@ -147,4 +152,8 @@
             display: none;
         }
     }
+}
+
+.hidden {
+    display: none;
 }
