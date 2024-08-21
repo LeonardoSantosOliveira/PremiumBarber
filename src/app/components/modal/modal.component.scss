@@ -12,8 +12,110 @@
 
 .modal {
     width: 620px;
-    height: 736px;
+    height: auto;
     background-color: $blue;
     border-radius: 16px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438)
-}   
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+    padding: 40px 85px;
+
+    &__header {
+        position: relative;
+        margin-bottom: 24px;
+
+        &-title {
+            color: #FFF;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        & .bi-x-lg {
+            color: $yellow;
+            position: absolute;
+            top: -30px;
+            right: -60px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        &-label {
+            color: #fff;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        &-input {
+            outline: none;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            height: 56px;
+
+            &::placeholder {
+                color: #515151;
+            }
+        }
+
+        &-option {
+            background-color: #fff;
+            color: $blue;
+            font-size: 16px;
+        }
+    }
+
+    &__footer {
+
+
+        &-hours {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-x: auto;
+            gap: 14px;
+        }
+
+        &-hour {
+            padding: 10px 30px;
+            color: #FFF;
+            background-color: $blue-dark;
+            cursor: pointer;
+            border: 1px solid #7B7B7B;
+            border-radius: 8px;
+        }
+    }
+}
+ 
+.subir {
+    margin-top: -20px;
+}
+
+.pt1 {
+    margin-top: 10px;
+}
+
+.active {
+    transition: all ease .2s;
+    background-color: #f0b25b2f;
+    border: 1px solid #F0B35B;
+}
+
+.bi::before,
+[class*=" bi-"]::before,
+[class^=bi-]::before {
+    font-weight: 700 !important;
+}

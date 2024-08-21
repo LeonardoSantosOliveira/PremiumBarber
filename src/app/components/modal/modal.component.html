@@ -1,5 +1,49 @@
 <div class="container__modal">
     <div class="modal">
-        
+        <div class="modal__header">
+            <h2 class="modal__header-title">Agendar Horário</h2>
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <div class="modal__content">
+            <div class="modal__content-item">
+                <label class="modal__content-label" for="inputName">Nome completo:</label>
+                <input class="modal__content-input" id="inputName" type="text" placeholder="Digite o seu nome">
+            </div>
+            <div class="modal__content-item">
+                <label class="modal__content-label" for="">Selecione a data:</label>
+                <mat-form-field>
+                    <mat-label>Data:</mat-label>
+                    <input matInput [matDatepicker]="picker" [min]="minDate">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="modal__content-item subir">
+                <label class="modal__content-label" for="inputName">Selecione um serviço:</label>
+                <select class="modal__content-input" name="servicos" id="servicos">
+                    @for (corte of cortes; track corte) {
+                    <option class="modal__content-option" [value]="corte.value">{{ corte.title }} - R${{ corte.price
+                        }},00</option>
+                    }
+                </select>
+            </div>
+            <div class="modal__content-item">
+                <label class="modal__content-label" for="inputUnidade">Selecione uma unidade:</label>
+                <select class="modal__content-input" name="inputUnidade" id="inputUnidade">
+                    <option class="modal__content-option" value="iguape">Adhemar de Barro, 870</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal__footer">
+            <p class="modal__content-label pt1">Selecione um horário:</p>
+            <div class="modal__footer-hours">
+                @for (hora of horarioFuncionamento; track $index) {
+                <div [ngClass]="{'active': horaSelecionadoIndex === $index}" class="modal__footer-hour" (click)="selecionarHora(hora, $index)" #horario>
+                    {{ horarioFuncionamento[$index] }}
+                </div>
+                }
+            </div>
+        </div>
     </div>
 </div>

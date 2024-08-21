@@ -37,3 +37,10 @@ a {
 .hidden {
     display: none;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+    border-radius: 8px !important;
+}
