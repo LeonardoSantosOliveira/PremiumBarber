@@ -111,11 +111,13 @@ export class ModalComponent implements OnInit {
       if (servico != '-1') {
         if (horario != '') {
 
+          /*
           console.log('nome: ', nome);
           console.log('data: ', dia, 'de: ', mes);
           console.log('servico: ', nomeCorte);
           console.log('unidade: ', local);
           console.log('Horario: ', horario);
+          */
 
         }
       }
