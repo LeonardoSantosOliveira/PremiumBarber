@@ -7,6 +7,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { GetCortesService } from '../../services/get-cortes.service';
 import { ICorte } from '../../interfaces/ICorte.interface';
 import { CommonModule } from '@angular/common';
+import { FormControl, FormGroup, ReactiveFormsModule, RequiredValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-modal',
@@ -18,18 +19,33 @@ import { CommonModule } from '@angular/common';
     MatDatepickerModule,
     MatNativeDateModule,
     CommonModule,
+    ReactiveFormsModule,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent implements OnInit {
 
-
   minDate: Date = new Date();
   cortes: ICorte[] = [];
   horaSelecionadoIndex: number | null = null;
 
   horarioSelecionado: string = ''
+
+  mesesDoAno: { [key: number]: string } = {
+    0: "Janeiro",
+    1: "Fevereiro",
+    2: "Março",
+    3: "Abril",
+    4: "Maio",
+    5: "Junho",
+    6: "Julho",
+    7: "Agosto",
+    8: "Setembro",
+    9: "Outubro",
+    10: "Novembro",
+    11: "Dezembro",
+  };
 
   horarioFuncionamento = [
     '09:00',
@@ -58,14 +74,54 @@ export class ModalComponent implements OnInit {
     private readonly _cortesServices: GetCortesService
   ) { }
 
+  agendar = new FormGroup({
+    nome: new FormControl('', Validators.required),
+    data: new FormControl(this.minDate, Validators.required),
+    servico: new FormControl('-1', Validators.required),
+    unidade: new FormControl('iguape', Validators.required)
+  })
+
   ngOnInit(): void {
     this._cortesServices.getCortes().subscribe(data => this.cortes = data);
   }
 
-  selecionarHora(hora: string, index: number) { 
+  selecionarHora(hora: string, index: number) {
     this.horaSelecionadoIndex = index;
-
     this.horarioSelecionado = hora;
+  }
+
+  mostrarValue() {
+    let nome = this.agendar.value.nome;
+    let diaPadrao = this.agendar.value.data;
+    let servico = this.agendar.value.servico;
+    let local = this.agendar.value.unidade;
+    let horario = this.horarioSelecionado;
+    
+    
+    
+    if (diaPadrao) {
+      let dia = diaPadrao.getDate();
+      let mesPadrao: number = diaPadrao?.getMonth();
+      let mes = this.mesesDoAno[mesPadrao];
+      
+      let nomeCorteFiltro = this.cortes.filter(corte => corte.value == servico);
+      let nomeCorte = nomeCorteFiltro[0].title
+      
+      //verifica se os campos estão devidamente preenchidos
+      if (servico != '-1') {
+        if (horario != '') {
+
+          console.log('nome: ', nome);
+          console.log('data: ', dia, 'de: ', mes);
+          console.log('servico: ', nomeCorte);
+          console.log('unidade: ', local);
+          console.log('Horario: ', horario);
+
+        }
+      }
+      
+    }
+
   }
 
 
