@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../button/button.component';
 
@@ -13,6 +13,9 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+
+  @Output() agendarEmitter = new EventEmitter();
+
   abrirMenu(menu: HTMLDivElement, overlay: HTMLDivElement) {
     menu.classList.remove("hidden");
     menu.classList.remove("animate__slideOutRight");
@@ -29,4 +32,11 @@ export class NavbarComponent {
     overlay.classList.add("hidden");
     overlay.style.zIndex = "-1";
   }
+
+  onClick() {
+    this.agendarEmitter.emit();
+  }
+
+
+
 }

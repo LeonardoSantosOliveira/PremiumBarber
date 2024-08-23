@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
+
 
 @Component({
   selector: 'app-hero',
@@ -11,5 +12,11 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+
+  @Output() agendarEmitter = new EventEmitter();
+  
+  onClick() {
+    this.agendarEmitter.emit();
+  }
 
 }

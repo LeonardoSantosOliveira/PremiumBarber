@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
@@ -7,6 +7,8 @@ import { PartyComponent } from '../party/party.component';
 import { UnitsComponent } from '../units/units.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ButtonWppComponent } from '../button-wpp/button-wpp.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-home',
@@ -19,11 +21,18 @@ import { ButtonWppComponent } from '../button-wpp/button-wpp.component';
     PartyComponent,
     UnitsComponent,
     FooterComponent,
-    ButtonWppComponent    
+    ButtonWppComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+
+  readonly dialog = inject(MatDialog);
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalComponent)
+  }
 
 }

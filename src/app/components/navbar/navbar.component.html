@@ -11,7 +11,7 @@
             </div>
         </li>
         <li class="navbar__item">
-            <app-button>Agendar Horário</app-button>
+            <app-button (click)="onClick()">Agendar Horário</app-button>
         </li>
         <div class="hamburguer" (click)="abrirMenu(menu, overlay)">
             <div class="hamburguer__item"></div>
@@ -28,6 +28,6 @@
         <li class="menu__list-item">Serviços</li>
         <li class="menu__list-item">Contatos</li>
     </ul>
-    <button class="menu__button">Agendar Horário</button>
+    <button type="button" class="menu__button" (click)="onClick()">Agendar Horário</button>
 </div>
 <div class="overlay hidden" #overlay></div>
