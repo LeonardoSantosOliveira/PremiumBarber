@@ -8,7 +8,7 @@ import { GetCortesService } from '../../services/get-cortes.service';
 import { ICorte } from '../../interfaces/ICorte.interface';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 @Component({
   selector: 'app-modal',
   standalone: true,
@@ -114,13 +114,13 @@ export class ModalComponent implements OnInit {
       if (servico != '-1') {
         if (horario != '') {
 
-          /*
+
           console.log('nome: ', nome);
           console.log('data: ', dia, 'de: ', mes);
           console.log('servico: ', nomeCorte);
           console.log('unidade: ', local);
           console.log('Horario: ', horario);
-          */
+
 
         }
       }
