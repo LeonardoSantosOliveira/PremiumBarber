@@ -139,19 +139,13 @@
         padding: 20px;
 
         &__header {
-            
+
 
             &-title {
                 font-size: 18px;
             }
 
-            & .bi-x-lg {
-                position: absolute;
-                top: -30px;
-                right: -60px;
-                font-size: 30px;
-                cursor: pointer;
-            }
+
         }
 
         &__content {
@@ -187,36 +181,16 @@
             }
         }
 
-        &__footer {
 
 
-            &-hours {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                overflow-x: auto;
-                gap: 14px;
-            }
 
-            &-hour {
-                padding: 10px 30px;
-                color: #FFF;
-                background-color: $blue-dark;
-                cursor: pointer;
-                border: 1px solid #7B7B7B;
-                border-radius: 8px;
-            }
-        }
+    }
 
-        &__button {
-            background-color: $yellow;
-            color: $blue-dark;
-            font-size: 16px;
-            font-weight: 700;
-            width: 100%;
-            padding: 10px 0px;
-            margin-top: 40px;
-            cursor: pointer;
-        }
+    .modal__header[_ngcontent-ng-c333387700] .bi-x-lg[_ngcontent-ng-c333387700] {
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        font-size: 30px;
+        cursor: pointer;
     }
 }
