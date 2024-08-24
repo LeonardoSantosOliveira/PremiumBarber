@@ -7,8 +7,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { GetCortesService } from '../../services/get-cortes.service';
 import { ICorte } from '../../interfaces/ICorte.interface';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormGroup, ReactiveFormsModule, RequiredValidator, Validators } from '@angular/forms';
-
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 @Component({
   selector: 'app-modal',
   standalone: true,
@@ -20,11 +20,13 @@ import { FormControl, FormGroup, ReactiveFormsModule, RequiredValidator, Validat
     MatNativeDateModule,
     CommonModule,
     ReactiveFormsModule,
+    MatDialogModule
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent implements OnInit {
+
 
   minDate: Date = new Date();
   cortes: ICorte[] = [];
@@ -71,7 +73,8 @@ export class ModalComponent implements OnInit {
     '19:00',
   ];
   constructor(
-    private readonly _cortesServices: GetCortesService
+    private readonly _cortesServices: GetCortesService,
+    private readonly _dialog: MatDialog,
   ) { }
 
   agendar = new FormGroup({
@@ -96,17 +99,17 @@ export class ModalComponent implements OnInit {
     let servico = this.agendar.value.servico;
     let local = this.agendar.value.unidade;
     let horario = this.horarioSelecionado;
-    
-    
-    
+
+
+
     if (diaPadrao) {
       let dia = diaPadrao.getDate();
       let mesPadrao: number = diaPadrao?.getMonth();
       let mes = this.mesesDoAno[mesPadrao];
-      
+
       let nomeCorteFiltro = this.cortes.filter(corte => corte.value == servico);
       let nomeCorte = nomeCorteFiltro[0].title
-      
+
       //verifica se os campos estão devidamente preenchidos
       if (servico != '-1') {
         if (horario != '') {
@@ -121,9 +124,13 @@ export class ModalComponent implements OnInit {
 
         }
       }
-      
+
     }
 
+  }
+
+  onClick() {
+    const dialogRef = this._dialog.closeAll();
   }
 
 
