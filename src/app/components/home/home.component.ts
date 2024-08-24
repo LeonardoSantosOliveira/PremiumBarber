@@ -29,10 +29,11 @@ import { ModalComponent } from '../modal/modal.component';
 export class HomeComponent {
 
 
-  readonly dialog = inject(MatDialog);
+  private readonly dialog = inject(MatDialog);
 
   openDialog() {
-    const dialogRef = this.dialog.open(ModalComponent)
+    const dialogRef = this.dialog.open(ModalComponent, {
+    })
   }
 
 }

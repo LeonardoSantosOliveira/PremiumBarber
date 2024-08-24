@@ -13,11 +13,13 @@
     font-family: "Poppins", sans-serif;
 }
 
-body, html {
+body,
+html {
     width: 100vw;
     height: 100vh;
     background-color: $blue;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -37,10 +39,19 @@ a {
 .hidden {
     display: none;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
 .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
     border-radius: 8px !important;
 }
+
