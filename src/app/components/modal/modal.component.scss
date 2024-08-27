@@ -107,10 +107,8 @@
         padding: 10px 0px;
         margin-top: 40px;
         cursor: pointer;
-
-        & a {
-            color: $blue-dark;
-        }
+        display: block;
+        text-align: center;
     }
 }
 
@@ -187,14 +185,14 @@
 
 
 
-
     }
 
-    .modal__header[_ngcontent-ng-c333387700] .bi-x-lg[_ngcontent-ng-c333387700] {
+    .modal__header[_ngcontent-ng-c2022423685] .bi-x-lg[_ngcontent-ng-c2022423685] {
+        color: #F0B35B;
         position: absolute;
-        top: -10px;
-        right: 0px;
-        font-size: 30px;
+        top: -15px;
+        right: -10px;
+        font-size: 40px;
         cursor: pointer;
     }
 }

@@ -42,15 +42,12 @@
             <div class="modal__footer-hours">
                 @for (hora of horarioFuncionamento; track $index) {
                 <div [ngClass]="{'active': horaSelecionadoIndex === $index}" class="modal__footer-hour"
-                    (click)="selecionarHora(hora, $index)" #horario>
+                    (click)="selecionarHora(hora, $index); agendarWpp()" #horario>
                     {{ horarioFuncionamento[$index] }}
                 </div>
                 }
             </div>
-            <a href=""></a>
-            <button type="submit" class="modal__button" [disabled]="agendar.invalid" (click)="agendarWpp($event)">
-                <a [href]="'https://wa.me/13996600013?text=' + mensagemFinal">Agendar horário</a>
-            </button>
+            <a class="modal__button" [href]="mensagemFinal ? 'https://wa.me/13996600013?text=' + mensagemFinal : ''">Agendar horário</a>
         </div>
     </form>
 </div>

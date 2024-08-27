@@ -94,9 +94,7 @@ export class ModalComponent implements OnInit {
     this.horarioSelecionado = hora;
   }
 
-  agendarWpp(event: MouseEvent) {
-
-    event.preventDefault();
+  agendarWpp() {
 
     let nome = this.agendar.value.nome;
     let diaPadrao = this.agendar.value.data;
