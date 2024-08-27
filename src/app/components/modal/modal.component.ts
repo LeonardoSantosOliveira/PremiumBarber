@@ -31,6 +31,7 @@ export class ModalComponent implements OnInit {
   minDate: Date = new Date();
   cortes: ICorte[] = [];
   horaSelecionadoIndex: number | null = null;
+  mensagemFinal: string | undefined = undefined;
 
   horarioSelecionado: string = ''
 
@@ -93,7 +94,10 @@ export class ModalComponent implements OnInit {
     this.horarioSelecionado = hora;
   }
 
-  mostrarValue() {
+  agendarWpp(event: MouseEvent) {
+
+    event.preventDefault();
+
     let nome = this.agendar.value.nome;
     let diaPadrao = this.agendar.value.data;
     let servico = this.agendar.value.servico;
@@ -114,12 +118,14 @@ export class ModalComponent implements OnInit {
       if (servico != '-1') {
         if (horario != '') {
 
+          const mensagem: string = `Olá, meu nome é *${nome}* e gostaria de agendar *${nomeCorte}*. No dia *${dia}* de *${mes}* ás *${horario}*. Este horário está disponível ?`
+          this.mensagemFinal = encodeURI(mensagem);
 
-          console.log('nome: ', nome);
-          console.log('data: ', dia, 'de: ', mes);
-          console.log('servico: ', nomeCorte);
-          console.log('unidade: ', local);
-          console.log('Horario: ', horario);
+          // console.log('nome: ', nome);
+          // console.log('data: ', dia, 'de: ', mes);
+          // console.log('servico: ', nomeCorte);
+          // console.log('unidade: ', local);
+          // console.log('Horario: ', horario);
 
 
         }

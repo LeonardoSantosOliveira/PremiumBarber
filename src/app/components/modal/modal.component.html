@@ -7,7 +7,8 @@
         <div class="modal__content">
             <div class="modal__content-item">
                 <label class="modal__content-label" for="inputName">Nome completo:</label>
-                <input class="modal__content-input" id="inputName" type="text" placeholder="Digite o seu nome" formControlName="nome">
+                <input class="modal__content-input" id="inputName" type="text" placeholder="Digite o seu nome"
+                    formControlName="nome">
             </div>
             <div class="modal__content-item">
                 <label class="modal__content-label" for="">Selecione a data:</label>
@@ -40,12 +41,16 @@
             <p class="modal__content-label pt1">Selecione um horário:</p>
             <div class="modal__footer-hours">
                 @for (hora of horarioFuncionamento; track $index) {
-                <div [ngClass]="{'active': horaSelecionadoIndex === $index}" class="modal__footer-hour" (click)="selecionarHora(hora, $index)" #horario>
+                <div [ngClass]="{'active': horaSelecionadoIndex === $index}" class="modal__footer-hour"
+                    (click)="selecionarHora(hora, $index)" #horario>
                     {{ horarioFuncionamento[$index] }}
                 </div>
                 }
             </div>
-            <button type="submit" class="modal__button" [disabled]="agendar.invalid" (click)="mostrarValue()">Agendar horário</button>
+            <a href=""></a>
+            <button type="submit" class="modal__button" [disabled]="agendar.invalid" (click)="agendarWpp($event)">
+                <a [href]="'https://wa.me/13996600013?text=' + mensagemFinal">Agendar horário</a>
+            </button>
         </div>
     </form>
 </div>
