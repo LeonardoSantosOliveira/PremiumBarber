@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class ButtonWppComponent {
 
+  mensagem: string = encodeURI('Gostaria de saber mais sobre seu serviço')
+
 }
