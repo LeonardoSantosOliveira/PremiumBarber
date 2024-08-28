@@ -183,6 +183,10 @@
                 &::placeholder {
                     color: #515151;
                 }
+
+                &:focus {
+                    resize: none;
+                }
             }
 
             &-option {
