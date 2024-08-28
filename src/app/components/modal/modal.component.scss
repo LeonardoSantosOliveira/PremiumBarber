@@ -147,6 +147,15 @@
                 font-size: 18px;
             }
 
+            & .bi-x-lg {
+                color: #F0B35B;
+                position: absolute;
+                top: -15px;
+                right: -10px;
+                font-size: 40px;
+                cursor: pointer;
+            }
+
 
         }
 
@@ -187,12 +196,5 @@
 
     }
 
-    .modal__header[_ngcontent-ng-c2022423685] .bi-x-lg[_ngcontent-ng-c2022423685] {
-        color: #F0B35B;
-        position: absolute;
-        top: -15px;
-        right: -10px;
-        font-size: 40px;
-        cursor: pointer;
-    }
+
 }
