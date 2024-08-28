@@ -10,12 +10,12 @@ registerLocaleData(localePt);
 @Component({
   selector: 'app-root',
   standalone: true,
-  providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }
-  ],
   imports: [
     RouterOutlet,
     HomeComponent
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -23,3 +23,4 @@ registerLocaleData(localePt);
 export class AppComponent {
   
 }
+ 
