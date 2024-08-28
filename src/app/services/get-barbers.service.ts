@@ -16,7 +16,7 @@ export class GetBarbersService {
       instagram: '',
     },
     {
-      name: "Bruno",
+      name: "Matheus",
       photo: "/assets/images/barber2.png",
       twitter: '',
       facebook: '',
