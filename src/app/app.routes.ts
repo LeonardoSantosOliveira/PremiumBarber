@@ -13,8 +13,4 @@ export const routes: Routes = [
         title: "Premium Barber",
         component: HomeComponent,
     },
-    {
-        path: 'modal',
-        component: ModalComponent,
-    },
 ];
