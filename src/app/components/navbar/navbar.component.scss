@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; // Adicionado para permitir o posicionamento absoluto dos filhos
+    position: relative;
 
     &__logo {
         width: 56px;
@@ -90,6 +90,7 @@
     &__img {
         width: 80px;
         height: 80px;
+        object-fit: contain;
         
     }
 
