@@ -17,9 +17,15 @@
     }
 
     &__logo {
-        width: 166px;
-        height: 196px;
+        width: 100%;
         margin-bottom: 100px;
+        object-fit: contain;
+
+        &-container {
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+        }
     }
     
 }
