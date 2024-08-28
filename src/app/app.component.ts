@@ -6,6 +6,7 @@ import localePt from '@angular/common/locales/pt';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 registerLocaleData(localePt);
+
 @Component({
   selector: 'app-root',
   standalone: true,

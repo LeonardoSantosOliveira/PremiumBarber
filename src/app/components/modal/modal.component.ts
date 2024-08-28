@@ -116,7 +116,7 @@ export class ModalComponent implements OnInit {
       if (servico != '-1') {
         if (horario != '') {
 
-          const mensagem: string = `Olá, meu nome é *${nome}* e gostaria de agendar *${nomeCorte}*. No dia *${dia}* de *${mes}* ás *${horario}*. Este horário está disponível ?`
+          const mensagem: string = `Olá, meu nome é *${nome}*. %0D%0D Gostaria de agendar *${nomeCorte}*. %0D%0D No dia *${dia}* de *${mes}* ás *${horario}*. %0D%0DEste horário está disponível ?`
           this.mensagemFinal = encodeURI(mensagem);
 
           // console.log('nome: ', nome);
